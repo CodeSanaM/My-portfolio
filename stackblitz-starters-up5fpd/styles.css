@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -140,26 +140,55 @@ body {
   margin-bottom: 20px;
 }
 
-#contact ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 15px; /* Add spacing between form elements */
 }
 
-#contact ul li {
+#contact label {
   font-size: 1rem;
-  margin: 10px 0;
-}
-
-#contact ul li a {
-  text-decoration: none;
-  color: #000b80;
   font-weight: bold;
-  transition: color 0.3s;
+  align-self: flex-start;
 }
 
-#contact ul li a:hover {
-  color: #800020; /* Burgundy on hover */
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #000b80; /* Add a focus effect */
+}
+
+#contact textarea {
+  resize: none; /* Prevent resizing */
+  height: 100px; /* Set default height */
+}
+
+#contact button {
+  padding: 10px 20px;
+  background-color: #000b80;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #040080;
 }
 
 /* Responsive Design */
@@ -207,7 +236,18 @@ body {
     font-size: 0.9rem;
   }
 
-  #contact ul li {
+  #contact label {
     font-size: 0.9rem;
+  }
+
+  #contact input,
+  #contact textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  #contact button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
   }
 }
