@@ -7,7 +7,7 @@ document.querySelectorAll('.sidebar nav a').forEach(anchor => {
     // Prevent the default action of the link (jumping directly to the section).
     e.preventDefault();
 
-    // Use 'getAttribute' to get the href value of the clicked link (e.g., #about, #projects).
+    // Use 'getAttribute' to get the href value of the clicked link (#about, #projects).
     // Then find the section on the page that matches this ID.
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth' // Enable the smooth scrolling effect to the target section.
